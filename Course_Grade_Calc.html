@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Course Grade Calculator" />
+    <title>Course Grade Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function CourseAvg() {
+        var assign_avg = parseFloat(
+          document.getElementById("Assignments").value
+        );
+        var quiz_avg = parseFloat(document.getElementById("Quizes").value);
+        var midterm_avg = parseFloat(
+          document.getElementById("Midterm_Exam").value
+        );
+        var final_exam_avg = parseFloat(
+          document.getElementById("Final_Exam").value
+        );
+        var other_avg = parseFloat(document.getElementById("Other").value);
+        var assign_percent_weight = parseFloat(
+          document.getElementById("Assignments2").value
+        );
+        var quiz_percent_weight = parseFloat(
+          document.getElementById("Quizes2").value
+        );
+        var midterm_percent_weight = parseFloat(
+          document.getElementById("Midterm_Exam2").value
+        );
+        var final_exam_percent_weight = parseFloat(
+          document.getElementById("Final_Exam2").value
+        );
+        var other_percent_weight = parseFloat(
+          document.getElementById("Other2").value
+        );
+
+        if (
+          assign_percent_weight +
+            quiz_percent_weight +
+            midterm_percent_weight +
+            final_exam_percent_weight +
+            other_percent_weight >
+          100
+        ) {
+          alert("Error: Percent Weightings Exceed 100%");
+        }
+
+        var assign_weight = (assign_avg * assign_percent_weight) / 100;
+        var quizes_weight = (quiz_avg * quiz_percent_weight) / 100;
+        var midterm_weight = (midterm_avg * midterm_percent_weight) / 100;
+        var final_weight = (final_exam_avg * final_exam_percent_weight) / 100;
+        var other_weight = (other_avg * other_percent_weight) / 100;
+
+        var course_avg =
+          assign_weight +
+          quizes_weight +
+          midterm_weight +
+          final_weight +
+          other_weight;
+
+        document.getElementById("Course_Average").value = course_avg;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/calc.png" class="logo" />
+    </div>
+    <div class="content">
+      <h1>Calculate Your Course Grade!</h1>
+      <h2>If any of the rows are not applicable, insert a 0 into the box</h2>
+      <table class="table1">
+        <tr>
+          <th></th>
+          <th>Grade:</th>
+          <th>Weight:</th>
+        </tr>
+        <tr>
+          <td>Assignments</td>
+          <td><input type="text" id="Assignments" /></td>
+          <td><input type="text" id="Assignments2" /></td>
+        </tr>
+        <tr>
+          <td>Quizes</td>
+          <td><input type="text" id="Quizes" /></td>
+          <td><input type="text" id="Quizes2" /></td>
+        </tr>
+        <tr>
+          <td>Midterm Exam</td>
+          <td><input type="text" id="Midterm_Exam" /></td>
+          <td><input type="text" id="Midterm_Exam2" /></td>
+        </tr>
+        <tr>
+          <td>Final Exam</td>
+          <td><input type="text" id="Final_Exam" /></td>
+          <td><input type="text" id="Final_Exam2" /></td>
+        </tr>
+        <tr>
+          <td>Labs</td>
+          <td><input type="text" id="Other" /></td>
+          <td><input type="text" id="Other2" /></td>
+        </tr>
+      </table>
+      <input
+        type="button"
+        value="Calculate!"
+        onclick="CourseAvg()"
+        class="button"
+      />
+      <table class="table2">
+        <tr>
+          <td>Overall Course Average</td>
+          <td><input type="text" id="Course_Average" maxlength="10" /></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
