@@ -32,6 +32,9 @@
         var other_percent_weight = parseFloat(
           document.getElementById("Other2").value
         );
+        var desired_course_grade = parseFloat(
+          document.getElementById("Course_Average").value
+        );
 
         if (
           assign_percent_weight +
@@ -57,7 +60,19 @@
           final_weight +
           other_weight;
 
-        document.getElementById("Course_Average").value = course_avg;
+        if (final_exam_avg == -1) {
+          var final_exam_mark_required =
+            (desired_course_grade - course_avg - final_weight) /
+            (final_exam_percent_weight / 100);
+          if (final_exam_mark_required > 0) {
+            document.getElementById("Final_Exam").value =
+              final_exam_mark_required;
+          } else {
+            document.getElementById("Final_Exam").value = 0;
+          }
+        } else {
+          document.getElementById("Course_Average").value = course_avg;
+        }
       }
     </script>
   </head>
@@ -67,7 +82,17 @@
     </div>
     <div class="content">
       <h1>Calculate Your Course Grade!</h1>
-      <h2>If any of the rows are not applicable, insert a 0 into the box</h2>
+      <h2>If any of the rows are not applicable, insert a 0 into the box.</h2>
+      <div class="outer">
+        <div class="speech">
+          <p>
+            If you want to see what grade you need on your final exam to acheive
+            a desired grade in the course, insert your desired grade under
+            "overall course average", and press "calculate!"
+          </p>
+        </div>
+      </div>
+
       <table class="table1">
         <tr>
           <th></th>
@@ -115,3 +140,4 @@
     </div>
   </body>
 </html>
+
