@@ -16,7 +16,7 @@ The references that helped me complete this project included the following youtu
 
 These two images were also used to help me with the website:
 
-1. https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/79229/calculator-clipart-md.png
+1. https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png
 
 2. https://www.planksip.org/content/images/2021/05/sea-edge-79ab30e2.png
 
