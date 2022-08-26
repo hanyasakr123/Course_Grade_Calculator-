@@ -5,7 +5,7 @@
 .container{
   height: 100vh;
   width: 100%;
-  background-image: url(images/background.png) ; 
+  background-image: url(images/background_img.pixabay.png) ; 
   background-position: center ; 
   padding-left: 5%;
   padding-right: 5%;
@@ -57,7 +57,7 @@
   margin: 0 0 10px 0px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-left: 150px;
-  margin-top:-450px;
+  margin-top:-480px;
   font-size: 20px;
   display: inline-block;
   background: linear-gradient(45deg, #87adfe, #ff77cd);
@@ -110,4 +110,5 @@
     box-shadow: 3px 8px 22px rgba(94, 28, 2);
 
   }
+
 
