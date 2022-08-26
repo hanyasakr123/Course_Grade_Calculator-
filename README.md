@@ -16,7 +16,7 @@ The references that helped me complete this project included the following youtu
 
 These two images were also used to help me with the website:
 
-1. https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png
+1. https://pixabay.com/illustrations/colorful-rainbow-gradient-geometric-2174045/
 
 2. https://creazilla.com/nodes/79229-calculator-clipart
 
